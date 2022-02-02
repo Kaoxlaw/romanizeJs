@@ -12,13 +12,19 @@ git clone https://github.com/Kaoxlaw/romanizeJs.git
 
 Then
 
-```javascipt
+```bash
+cd romanizeJs/
+```
+
+and
+
+```bash
 npm install
 ```
 
-## Usage
+## Try some test
 
-```javascipt
+```bash
 npm test
 ```
 
