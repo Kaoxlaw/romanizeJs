@@ -16,7 +16,7 @@ Then
 cd romanizeJs/
 ```
 
-and
+And
 
 ```bash
 npm install
