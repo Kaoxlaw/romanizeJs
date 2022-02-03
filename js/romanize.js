@@ -1,5 +1,8 @@
-module.exports = function romanize(num){
-  var romanList = {
+function romanize(arabicNumerals) {
+  if (isNaN(arabicNumerals)) {
+    return `${arabicNumerals} is not a number`
+  } else {
+    const romanList = {
       M: 1000,
       CM: 900,
       D: 500,
@@ -13,19 +16,18 @@ module.exports = function romanize(num){
       V: 5,
       IV: 4,
       I: 1,
-    },
-    romanNum = "",
-    i;
-  for (i in romanList) {
-    while (num >= romanList[i]) {
-      romanNum += i;
-      num -= romanList[i];
+    };
+    let romanizeNum = "";
+    for (const romanNumber in romanList) {
+      while (arabicNumerals >= romanList[romanNumber]) {
+        romanizeNum += romanNumber;
+        arabicNumerals -= romanList[romanNumber];
+      }
     }
+    return romanizeNum;
   }
-  return romanNum;
 }
 
-// console.log(romanize(100));
+// console.log(romanize("43"));
 
-
-
+module.exports = romanize;
